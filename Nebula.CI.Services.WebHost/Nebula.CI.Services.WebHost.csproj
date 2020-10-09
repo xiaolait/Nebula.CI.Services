@@ -31,5 +31,8 @@
     <ProjectReference Include="..\Nebula.CI.Services.Proxy\Nebula.CI.Services.Proxy.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\Nebula.CI.Services.Plugins\Nebula.CI.Services.Plugin.Application\Nebula.CI.Services.Plugin.Application.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>

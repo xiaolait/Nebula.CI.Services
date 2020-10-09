@@ -5,6 +5,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Nebula.CI.Services.Pipeline;
 using Nebula.CI.Services.PipelineHistory;
+using Nebula.CI.Services.Plugin;
 using Nebula.CI.Services.Proxy;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.Mvc;
@@ -24,6 +25,8 @@ namespace Nebula.CI.Services.WebHost
     [DependsOn(typeof(PipelineHistoryEFCoreModule))]
     [DependsOn(typeof(PipelineHistoryEFCoreDbMigrationsModule))]
 
+    [DependsOn(typeof(PluginApplicationModule))]
+
     [DependsOn(typeof(ServicesProxyModule))]
     public class WebHostModule : AbpModule
     {
@@ -33,6 +36,7 @@ namespace Nebula.CI.Services.WebHost
             {
                 options.ConventionalControllers.Create(typeof(PipelineApplicationModule).Assembly);
                 options.ConventionalControllers.Create(typeof(PipelineHistoryApplicationModule).Assembly);
+                options.ConventionalControllers.Create(typeof(PluginApplicationModule).Assembly);
             });
 
             ConfigureAuthentication(context);

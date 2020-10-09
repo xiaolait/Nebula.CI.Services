@@ -33,6 +33,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.Pipeline
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.Proxy", "Nebula.CI.Services.Proxy\Nebula.CI.Services.Proxy.csproj", "{D8D3A3A2-59E4-41B7-8B7F-987F75DDED80}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nebula.CI.Services.Plugins", "Nebula.CI.Services.Plugins", "{379E02BB-2B53-4271-BDA9-2B0E00983937}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.Plugin.Domain", "Nebula.CI.Services.Plugins\Nebula.CI.Services.Plugin.Domain\Nebula.CI.Services.Plugin.Domain.csproj", "{0279FDEC-44AF-432C-8961-7C39B7943555}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.Plugin.Engine", "Nebula.CI.Services.Plugins\Nebula.CI.Services.Plugin.Engine\Nebula.CI.Services.Plugin.Engine.csproj", "{5E4897DB-64F0-413E-BEF1-F778DA53BF22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.Plugin.Application", "Nebula.CI.Services.Plugins\Nebula.CI.Services.Plugin.Application\Nebula.CI.Services.Plugin.Application.csproj", "{980105B2-4536-4D70-90F2-FA0DB850051D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.Plugin.Application.Contracts", "Nebula.CI.Services.Plugins\Nebula.CI.Services.Plugin.Application.Contracts\Nebula.CI.Services.Plugin.Application.Contracts.csproj", "{B9C47BC5-E7E6-45CC-BDB1-DFE252E0C76C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +105,22 @@ Global
 		{D8D3A3A2-59E4-41B7-8B7F-987F75DDED80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8D3A3A2-59E4-41B7-8B7F-987F75DDED80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8D3A3A2-59E4-41B7-8B7F-987F75DDED80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0279FDEC-44AF-432C-8961-7C39B7943555}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0279FDEC-44AF-432C-8961-7C39B7943555}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0279FDEC-44AF-432C-8961-7C39B7943555}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0279FDEC-44AF-432C-8961-7C39B7943555}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E4897DB-64F0-413E-BEF1-F778DA53BF22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E4897DB-64F0-413E-BEF1-F778DA53BF22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E4897DB-64F0-413E-BEF1-F778DA53BF22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E4897DB-64F0-413E-BEF1-F778DA53BF22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{980105B2-4536-4D70-90F2-FA0DB850051D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{980105B2-4536-4D70-90F2-FA0DB850051D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{980105B2-4536-4D70-90F2-FA0DB850051D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{980105B2-4536-4D70-90F2-FA0DB850051D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9C47BC5-E7E6-45CC-BDB1-DFE252E0C76C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9C47BC5-E7E6-45CC-BDB1-DFE252E0C76C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9C47BC5-E7E6-45CC-BDB1-DFE252E0C76C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9C47BC5-E7E6-45CC-BDB1-DFE252E0C76C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9E24B2B9-D36C-40C1-B672-D0B6A8D6875F} = {C501F53C-E86C-4B1C-BFCB-BF266C4DAC34}
@@ -109,5 +135,9 @@ Global
 		{5AC12790-AD0C-42D8-81BC-13D15FF5614E} = {0225921B-00AE-4E51-99C5-BBB8D524D116}
 		{61715707-CCC1-4A50-A633-25A0B4F3A3E7} = {0225921B-00AE-4E51-99C5-BBB8D524D116}
 		{81438660-2529-4580-BA0F-C39B0246451E} = {0225921B-00AE-4E51-99C5-BBB8D524D116}
+		{0279FDEC-44AF-432C-8961-7C39B7943555} = {379E02BB-2B53-4271-BDA9-2B0E00983937}
+		{5E4897DB-64F0-413E-BEF1-F778DA53BF22} = {379E02BB-2B53-4271-BDA9-2B0E00983937}
+		{980105B2-4536-4D70-90F2-FA0DB850051D} = {379E02BB-2B53-4271-BDA9-2B0E00983937}
+		{B9C47BC5-E7E6-45CC-BDB1-DFE252E0C76C} = {379E02BB-2B53-4271-BDA9-2B0E00983937}
 	EndGlobalSection
 EndGlobal
