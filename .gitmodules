@@ -4,3 +4,6 @@
 [submodule "Nebula.CI.Services.PipelineHistory"]
 	path = Nebula.CI.Services.PipelineHistory
 	url = https://github.com/xiaolait/Nebula.CI.Services.PipelineHistory.git
+[submodule "Nebula.CI.Services.Plugins"]
+	path = Nebula.CI.Services.Plugins
+	url = https://github.com/Lirx93/Nebula.CI.Services.Plugin.git
