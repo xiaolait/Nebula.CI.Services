@@ -20,7 +20,8 @@ namespace Nebula.CI.Services.WebHost
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
-                });
+                    webBuilder.UseStartup<Startup>()
+                        .UseUrls("http://+:5000");
+                }).UseAutofac();
     }
 }

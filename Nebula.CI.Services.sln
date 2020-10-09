@@ -3,6 +3,36 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.WebHost", "Nebula.CI.Services.WebHost\Nebula.CI.Services.WebHost.csproj", "{C3F67706-30B8-45DC-A5FD-B7CA19186EF5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nebula.CI.Services.Pipeline", "Nebula.CI.Services.Pipeline", "{C501F53C-E86C-4B1C-BFCB-BF266C4DAC34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.Pipeline.Domain", "Nebula.CI.Services.Pipeline\Nebula.CI.Services.Pipeline.Domain\Nebula.CI.Services.Pipeline.Domain.csproj", "{9E24B2B9-D36C-40C1-B672-D0B6A8D6875F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.Pipeline.EFCore", "Nebula.CI.Services.Pipeline\Nebula.CI.Services.Pipeline.EFCore\Nebula.CI.Services.Pipeline.EFCore.csproj", "{110B3FA0-852B-4141-9617-56E12A92DD3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.Pipeline.EFCore.DbMigrations", "Nebula.CI.Services.Pipeline\Nebula.CI.Services.Pipeline.EFCore.DbMigrations\Nebula.CI.Services.Pipeline.EFCore.DbMigrations.csproj", "{168318EF-99CB-4864-9E14-8BCA67EAD18B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.Pipeline.Application.Contracts", "Nebula.CI.Services.Pipeline\Nebula.CI.Services.Pipeline.Application.Contracts\Nebula.CI.Services.Pipeline.Application.Contracts.csproj", "{987C0224-AA5F-46F2-B5BB-80BBC4344A8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.Pipeline.Application", "Nebula.CI.Services.Pipeline\Nebula.CI.Services.Pipeline.Application\Nebula.CI.Services.Pipeline.Application.csproj", "{C5293641-3FE0-4489-A4F7-DBDA8F00F0B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nebula.CI.Services.PipelineHistory", "Nebula.CI.Services.PipelineHistory", "{0225921B-00AE-4E51-99C5-BBB8D524D116}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.PipelineHistory.Domain", "Nebula.CI.Services.PipelineHistory\Nebula.CI.Services.PipelineHistory.Domain\Nebula.CI.Services.PipelineHistory.Domain.csproj", "{7A2BD497-8403-403E-8AF5-D07A50E9675B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.PipelineHistory.EFCore", "Nebula.CI.Services.PipelineHistory\Nebula.CI.Services.PipelineHistory.EFCore\Nebula.CI.Services.PipelineHistory.EFCore.csproj", "{CB299A8E-2853-4479-835F-934ABCEFE94A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.PipelineHistory.EFCore.DbMigrations", "Nebula.CI.Services.PipelineHistory\Nebula.CI.Services.PipelineHistory.EFCore.DbMigrations\Nebula.CI.Services.PipelineHistory.EFCore.DbMigrations.csproj", "{65A6A6CC-F24C-4EF1-A209-BAE404F08FF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.PipelineHistory.Background", "Nebula.CI.Services.PipelineHistory\Nebula.CI.Services.PipelineHistory.Background\Nebula.CI.Services.PipelineHistory.Background.csproj", "{59202DE8-CEB1-4519-A98E-938BC562BF4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.PipelineHistory.Background.Args", "Nebula.CI.Services.PipelineHistory\Nebula.CI.Services.PipelineHistory.Background.Args\Nebula.CI.Services.PipelineHistory.Background.Args.csproj", "{5AC12790-AD0C-42D8-81BC-13D15FF5614E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.PipelineHistory.Application.Contracts", "Nebula.CI.Services.PipelineHistory\Nebula.CI.Services.PipelineHistory.Application.Contracts\Nebula.CI.Services.PipelineHistory.Application.Contracts.csproj", "{61715707-CCC1-4A50-A633-25A0B4F3A3E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.PipelineHistory.Application", "Nebula.CI.Services.PipelineHistory\Nebula.CI.Services.PipelineHistory.Application\Nebula.CI.Services.PipelineHistory.Application.csproj", "{81438660-2529-4580-BA0F-C39B0246451E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.Proxy", "Nebula.CI.Services.Proxy\Nebula.CI.Services.Proxy.csproj", "{D8D3A3A2-59E4-41B7-8B7F-987F75DDED80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +43,71 @@ Global
 		{C3F67706-30B8-45DC-A5FD-B7CA19186EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3F67706-30B8-45DC-A5FD-B7CA19186EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3F67706-30B8-45DC-A5FD-B7CA19186EF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E24B2B9-D36C-40C1-B672-D0B6A8D6875F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E24B2B9-D36C-40C1-B672-D0B6A8D6875F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E24B2B9-D36C-40C1-B672-D0B6A8D6875F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E24B2B9-D36C-40C1-B672-D0B6A8D6875F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{110B3FA0-852B-4141-9617-56E12A92DD3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{110B3FA0-852B-4141-9617-56E12A92DD3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{110B3FA0-852B-4141-9617-56E12A92DD3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{110B3FA0-852B-4141-9617-56E12A92DD3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{168318EF-99CB-4864-9E14-8BCA67EAD18B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{168318EF-99CB-4864-9E14-8BCA67EAD18B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{168318EF-99CB-4864-9E14-8BCA67EAD18B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{168318EF-99CB-4864-9E14-8BCA67EAD18B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{987C0224-AA5F-46F2-B5BB-80BBC4344A8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{987C0224-AA5F-46F2-B5BB-80BBC4344A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{987C0224-AA5F-46F2-B5BB-80BBC4344A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{987C0224-AA5F-46F2-B5BB-80BBC4344A8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5293641-3FE0-4489-A4F7-DBDA8F00F0B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5293641-3FE0-4489-A4F7-DBDA8F00F0B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5293641-3FE0-4489-A4F7-DBDA8F00F0B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5293641-3FE0-4489-A4F7-DBDA8F00F0B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A2BD497-8403-403E-8AF5-D07A50E9675B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A2BD497-8403-403E-8AF5-D07A50E9675B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A2BD497-8403-403E-8AF5-D07A50E9675B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A2BD497-8403-403E-8AF5-D07A50E9675B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB299A8E-2853-4479-835F-934ABCEFE94A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB299A8E-2853-4479-835F-934ABCEFE94A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB299A8E-2853-4479-835F-934ABCEFE94A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB299A8E-2853-4479-835F-934ABCEFE94A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65A6A6CC-F24C-4EF1-A209-BAE404F08FF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65A6A6CC-F24C-4EF1-A209-BAE404F08FF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65A6A6CC-F24C-4EF1-A209-BAE404F08FF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65A6A6CC-F24C-4EF1-A209-BAE404F08FF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59202DE8-CEB1-4519-A98E-938BC562BF4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59202DE8-CEB1-4519-A98E-938BC562BF4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59202DE8-CEB1-4519-A98E-938BC562BF4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59202DE8-CEB1-4519-A98E-938BC562BF4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AC12790-AD0C-42D8-81BC-13D15FF5614E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AC12790-AD0C-42D8-81BC-13D15FF5614E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AC12790-AD0C-42D8-81BC-13D15FF5614E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AC12790-AD0C-42D8-81BC-13D15FF5614E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61715707-CCC1-4A50-A633-25A0B4F3A3E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61715707-CCC1-4A50-A633-25A0B4F3A3E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61715707-CCC1-4A50-A633-25A0B4F3A3E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61715707-CCC1-4A50-A633-25A0B4F3A3E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81438660-2529-4580-BA0F-C39B0246451E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81438660-2529-4580-BA0F-C39B0246451E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81438660-2529-4580-BA0F-C39B0246451E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81438660-2529-4580-BA0F-C39B0246451E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8D3A3A2-59E4-41B7-8B7F-987F75DDED80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8D3A3A2-59E4-41B7-8B7F-987F75DDED80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8D3A3A2-59E4-41B7-8B7F-987F75DDED80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8D3A3A2-59E4-41B7-8B7F-987F75DDED80}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9E24B2B9-D36C-40C1-B672-D0B6A8D6875F} = {C501F53C-E86C-4B1C-BFCB-BF266C4DAC34}
+		{110B3FA0-852B-4141-9617-56E12A92DD3F} = {C501F53C-E86C-4B1C-BFCB-BF266C4DAC34}
+		{168318EF-99CB-4864-9E14-8BCA67EAD18B} = {C501F53C-E86C-4B1C-BFCB-BF266C4DAC34}
+		{987C0224-AA5F-46F2-B5BB-80BBC4344A8F} = {C501F53C-E86C-4B1C-BFCB-BF266C4DAC34}
+		{C5293641-3FE0-4489-A4F7-DBDA8F00F0B6} = {C501F53C-E86C-4B1C-BFCB-BF266C4DAC34}
+		{7A2BD497-8403-403E-8AF5-D07A50E9675B} = {0225921B-00AE-4E51-99C5-BBB8D524D116}
+		{CB299A8E-2853-4479-835F-934ABCEFE94A} = {0225921B-00AE-4E51-99C5-BBB8D524D116}
+		{65A6A6CC-F24C-4EF1-A209-BAE404F08FF5} = {0225921B-00AE-4E51-99C5-BBB8D524D116}
+		{59202DE8-CEB1-4519-A98E-938BC562BF4B} = {0225921B-00AE-4E51-99C5-BBB8D524D116}
+		{5AC12790-AD0C-42D8-81BC-13D15FF5614E} = {0225921B-00AE-4E51-99C5-BBB8D524D116}
+		{61715707-CCC1-4A50-A633-25A0B4F3A3E7} = {0225921B-00AE-4E51-99C5-BBB8D524D116}
+		{81438660-2529-4580-BA0F-C39B0246451E} = {0225921B-00AE-4E51-99C5-BBB8D524D116}
 	EndGlobalSection
 EndGlobal

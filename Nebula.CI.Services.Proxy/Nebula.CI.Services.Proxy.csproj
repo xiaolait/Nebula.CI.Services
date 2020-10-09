@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Nebula.CI.Services.PipelineHistory\Nebula.CI.Services.PipelineHistory.Application.Contracts\Nebula.CI.Services.PipelineHistory.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Nebula.CI.Services.Pipeline\Nebula.CI.Services.Pipeline.Application.Contracts\Nebula.CI.Services.Pipeline.Application.Contracts.csproj" />
+  </ItemGroup>
 </Project>
