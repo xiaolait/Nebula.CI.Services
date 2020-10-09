@@ -1,0 +1,6 @@
+[submodule "Nebula.CI.Services.Pipeline"]
+	path = Nebula.CI.Services.Pipeline
+	url = https://github.com/xiaolait/Nebula.CI.Services.Pipeline.git
+[submodule "Nebula.CI.Services.PipelineHistory"]
+	path = Nebula.CI.Services.PipelineHistory
+	url = https://github.com/xiaolait/Nebula.CI.Services.PipelineHistory.git
