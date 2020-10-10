@@ -21,7 +21,6 @@ namespace Nebula.CI.Services.WebHost
     [DependsOn(typeof(PipelineApplicationModule))]
     [DependsOn(typeof(PipelineEFCoreModule))]
     [DependsOn(typeof(PipelineEFCoreDbMigrationsModule))]
-    [DependsOn(typeof(PipelineBackgroundModule))]
 
     [DependsOn(typeof(PipelineHistoryApplicationModule))]
     [DependsOn(typeof(PipelineHistoryEFCoreModule))]

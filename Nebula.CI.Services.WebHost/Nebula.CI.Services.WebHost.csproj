@@ -39,6 +39,7 @@
     </ProjectReference>
     <ProjectReference Include="..\Nebula.CI.Services.Pipeline\Nebula.CI.Services.Pipeline.Background\Nebula.CI.Services.Pipeline.Background.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+      <ReferenceSourceTarget></ReferenceSourceTarget>
     </ProjectReference>
   </ItemGroup>
 </Project>
