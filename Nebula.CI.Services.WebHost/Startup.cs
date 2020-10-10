@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Volo.Abp;
 
 namespace Nebula.CI.Services.WebHost
 {
@@ -17,7 +18,9 @@ namespace Nebula.CI.Services.WebHost
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddApplication<WebHostModule>();
+            services.AddApplication<WebHostModule>(option => {
+                //option.UseAutofac();
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
