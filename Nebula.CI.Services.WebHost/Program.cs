@@ -2,15 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Autofac;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Nebula.CI.Services.Pipeline;
-using Nebula.CI.Services.PipelineHistory;
-using Nebula.CI.Services.Proxy;
 
 namespace Nebula.CI.Services.WebHost
 {
@@ -27,13 +22,6 @@ namespace Nebula.CI.Services.WebHost
                 {
                     webBuilder.UseStartup<Startup>()
                         .UseUrls("http://+:5000");
-                }).UseAutofac().ConfigureServices(services => {
-                    var containerBuilder = services.GetContainerBuilder();
-                    containerBuilder.RegisterType<PipelineProxy>().As<IPipelineProxy>()
-                        .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies);
-
-                    containerBuilder.RegisterType<PipelineHistoryProxy>().As<IPipelineHistoryProxy>()
-                        .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies);
-                });
+                }).UseAutofac();
     }
 }

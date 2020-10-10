@@ -1,5 +1,4 @@
 ﻿using System;
-using Autofac;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,7 +24,6 @@ namespace Nebula.CI.Services.WebHost
     [DependsOn(typeof(PipelineHistoryApplicationModule))]
     [DependsOn(typeof(PipelineHistoryEFCoreModule))]
     [DependsOn(typeof(PipelineHistoryEFCoreDbMigrationsModule))]
-    [DependsOn(typeof(PipelineHistoryBackgroundModule))]
 
     [DependsOn(typeof(PluginApplicationModule))]
 
@@ -45,17 +43,6 @@ namespace Nebula.CI.Services.WebHost
             configureSwaggerService(context);
         }
 
-        public override void PostConfigureServices(ServiceConfigurationContext context)
-        {
-            /*
-            var containerBuilder = context.Services.GetContainerBuilder();
-            containerBuilder.RegisterType<PipelineProxy>()
-                .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies);
-
-            containerBuilder.RegisterType<PipelineHistoryProxy>()
-                .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies);
-            */
-        }
 
         public override void OnPreApplicationInitialization(ApplicationInitializationContext context)
         {
