@@ -4,4 +4,4 @@ EXPOSE 5000
 
 COPY /bin/Release /app/Release
 WORKDIR /app/Release
-ENTRYPOINT dotnet Nebula.CI.Services.WebHost
+ENTRYPOINT dotnet Nebula.CI.Services.WebHost.dll
