@@ -20,7 +20,7 @@ namespace Nebula.CI.Services.Proxy
             {
                 No = input.ExecTimes,
                 Diagram = input.Diagram,
-                PipelineName = input.Diagram,
+                PipelineName = input.Name,
                 PipelineId = input.Id
             };
             await _pipelineHistoryAppService.CreateAsync(pipelineHistoryCreateDto);
