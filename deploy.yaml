@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nebula-ci
+  labels:
+    app: nebula-ci
+  namespace: nebula
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nebula-ci
+  template:
+    metadata:
+      labels:
+        app: nebula-ci
+    spec:
+      containers:
+      - name: nebula-ci
+        image: nebula/ci/services
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: nebula-ci
+  name: nebula-ci
+  namespace: nebula
+spec:
+  ports:
+  - port: 80
+    targetPort: 5000
+  selector:
+    app: nebula-ci
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nebula-ci
+  namespace: nebula
+spec:
+  rules:
+  -  http:
+      paths:
+      - path: /
+        backend:
+          serviceName: nebula-ci
+          servicePort: 80
