@@ -21,6 +21,17 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
+        env:
+        - name: PipelineDbServer    
+          value: "mysql"
+        - name: PipelineDbPort
+          value: "3306"
+        - name: PipelineHistoryDbServer    
+          value: "mysql"
+        - name: PipelineHistoryDbPort
+          value: "3306"
+        - name: AuthServer    
+          value: "http://172.18.67.167:32002"
 ---
 apiVersion: v1
 kind: Service
