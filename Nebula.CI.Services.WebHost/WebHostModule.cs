@@ -11,6 +11,7 @@ using Nebula.CI.Services.Proxy;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Autofac;
+using Volo.Abp.Data;
 using Volo.Abp.Modularity;
 
 namespace Nebula.CI.Services.WebHost
@@ -36,11 +37,18 @@ namespace Nebula.CI.Services.WebHost
         {
             Configure<AbpAspNetCoreMvcOptions>(options =>
             {
-                options.ConventionalControllers.Create(typeof(PipelineApplicationModule).Assembly);
-                options.ConventionalControllers.Create(typeof(PipelineHistoryApplicationModule).Assembly);
-                options.ConventionalControllers.Create(typeof(PluginApplicationModule).Assembly);
+                options.ConventionalControllers.Create(typeof(PipelineApplicationModule).Assembly, opts => {
+                    opts.RootPath = "ci";
+                });
+                options.ConventionalControllers.Create(typeof(PipelineHistoryApplicationModule).Assembly, opts => {
+                    opts.RootPath = "ci";
+                });
+                options.ConventionalControllers.Create(typeof(PluginApplicationModule).Assembly, opts => {
+                    opts.RootPath = "ci";
+                });
             });
 
+            ConfigureConnectionStrings(context);
             ConfigureAuthentication(context);
             configureSwaggerService(context);
         }
@@ -97,6 +105,18 @@ namespace Nebula.CI.Services.WebHost
             app.UseSwaggerUI(options =>
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "Nebula.CI Service API");
+            });
+        }
+
+        private void ConfigureConnectionStrings(ServiceConfigurationContext context)
+        {
+            var configuration = context.Services.GetConfiguration();
+            Configure<AbpDbConnectionOptions>(options =>
+            {
+                options.ConnectionStrings["Pipeline"] = 
+                    $"server={configuration["PipelineDbServer"]};port={configuration["PipelineDbPort"]??"3306"};" + options.ConnectionStrings["Pipeline"];
+                options.ConnectionStrings["PipelineHistory"] = 
+                    $"server={configuration["PipelineHistoryDbServer"]};port={configuration["PipelineHistoryDbPort"]??"3306"};" + options.ConnectionStrings["PipelineHistory"] ;
             });
         }
 
