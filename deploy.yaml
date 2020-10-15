@@ -23,15 +23,15 @@ spec:
         - containerPort: 5000
         env:
         - name: PipelineDbServer    
-          value: "mysql"
+          value: "mysql.nebula"
         - name: PipelineDbPort
           value: "3306"
         - name: PipelineHistoryDbServer    
-          value: "mysql"
+          value: "mysql.nebula"
         - name: PipelineHistoryDbPort
           value: "3306"
         - name: AuthServer    
-          value: "http://172.18.67.167:32002"
+          value: "identity.nebula"
 ---
 apiVersion: v1
 kind: Service
