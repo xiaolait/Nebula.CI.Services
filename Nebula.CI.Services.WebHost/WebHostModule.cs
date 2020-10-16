@@ -38,13 +38,13 @@ namespace Nebula.CI.Services.WebHost
             Configure<AbpAspNetCoreMvcOptions>(options =>
             {
                 options.ConventionalControllers.Create(typeof(PipelineApplicationModule).Assembly, opts => {
-                    opts.RootPath = "ci";
+                    opts.RootPath = "ci/services";
                 });
                 options.ConventionalControllers.Create(typeof(PipelineHistoryApplicationModule).Assembly, opts => {
-                    opts.RootPath = "ci";
+                    opts.RootPath = "ci/services";
                 });
                 options.ConventionalControllers.Create(typeof(PluginApplicationModule).Assembly, opts => {
-                    opts.RootPath = "ci";
+                    opts.RootPath = "ci/services";
                 });
             });
 
