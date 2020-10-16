@@ -31,9 +31,16 @@ spec:
         - name: PipelineHistoryDbPort
           value: "3306"
         - name: AuthServer    
-          value: "identity.nebula"
+          value: "http://identity.nebula"
         - name: K8sServer
           value: ""
+        volumeMounts:
+        - name: kubeconfig
+          mountPath: /root/.kube/config
+      volumes:
+      - name: kubeconfig
+        hostPath:
+          path: /root/.kube/config
 ---
 apiVersion: v1
 kind: Service
