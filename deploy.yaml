@@ -32,6 +32,8 @@ spec:
           value: "3306"
         - name: AuthServer    
           value: "identity.nebula"
+        - name: K8sServer
+          value: ""
 ---
 apiVersion: v1
 kind: Service
