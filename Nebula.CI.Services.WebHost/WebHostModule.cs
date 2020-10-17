@@ -48,6 +48,11 @@ namespace Nebula.CI.Services.WebHost
                 });
             });
 
+            context.Services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "wwwroot";
+            });
+
             ConfigureConnectionStrings(context);
             ConfigureAuthentication(context);
             configureSwaggerService(context);
@@ -96,6 +101,9 @@ namespace Nebula.CI.Services.WebHost
                 option.AllowAnyOrigin();
             });
 
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
@@ -106,6 +114,7 @@ namespace Nebula.CI.Services.WebHost
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "Nebula.CI Service API");
             });
+            app.UseSpa(spa=>{});
         }
 
         private void ConfigureConnectionStrings(ServiceConfigurationContext context)

@@ -7,3 +7,6 @@
 [submodule "Nebula.CI.Services.Plugins"]
 	path = Nebula.CI.Services.Plugins
 	url = https://github.com/Lirx93/Nebula.CI.Services.Plugin.git
+[submodule "Nebula.CI.Services.WebHost/ClientApp"]
+	path = Nebula.CI.Services.WebHost/ClientApp
+	url = https://github.com/jzhang000/Nebula.CI.Client.Web.git

@@ -34,6 +34,12 @@ spec:
           value: "http://identity.nebula"
         - name: K8sServer
           value: ""
+        - name: API_BASE_URL
+          value: ""
+        - name: AUTHORITY_URL
+          value: "http://172.18.67.167:32002"
+        - name: CLIENT_URL
+          value: "http://172.18.67.167:32100"
         volumeMounts:
         - name: kubeconfig
           mountPath: /root/.kube/config

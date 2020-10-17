@@ -1,3 +1,6 @@
+# web static file
+Nebula.CI.Services.WebHost/wwwroot/
+
 # globs
 Makefile.in
 *.userprefs
