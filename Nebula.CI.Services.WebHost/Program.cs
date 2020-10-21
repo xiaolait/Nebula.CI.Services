@@ -27,13 +27,14 @@ namespace Nebula.CI.Services.WebHost
                 {
                     webBuilder.UseStartup<Startup>()
                         .UseUrls("http://+:5000");
-                }).UseAutofac().ConfigureServices(services => {
+                }).UseAutofac();
+                /*.ConfigureServices(services => {
                     var containerBuilder = services.GetContainerBuilder();
                     containerBuilder.RegisterType<PipelineProxy>().As<IPipelineProxy>()
                         .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies);
 
                     containerBuilder.RegisterType<PipelineHistoryProxy>().As<IPipelineHistoryProxy>()
                         .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies);
-                });
+                });*/
     }
 }

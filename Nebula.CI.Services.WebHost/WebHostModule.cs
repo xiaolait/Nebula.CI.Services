@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Nebula.Abp.EventBus.InMemDistributed;
 using Nebula.CI.Services.Pipeline;
 using Nebula.CI.Services.PipelineHistory;
 using Nebula.CI.Services.Plugin;
@@ -31,6 +32,7 @@ namespace Nebula.CI.Services.WebHost
     [DependsOn(typeof(PluginApplicationModule))]
 
     [DependsOn(typeof(ServicesProxyModule))]
+    [DependsOn(typeof(InMemDistributedEventBusModule))]
     public class WebHostModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)

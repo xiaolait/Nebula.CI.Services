@@ -5,6 +5,7 @@ using Nebula.CI.Services.PipelineHistory;
 
 namespace Nebula.CI.Services.Proxy
 {
+    /*
     public class PipelineHistoryProxy : IPipelineHistoryProxy
     {
         private readonly IPipelineHistoryAppService _pipelineHistoryAppService;
@@ -13,7 +14,7 @@ namespace Nebula.CI.Services.Proxy
         {
             _pipelineHistoryAppService = pipelineHistoryAppService;
         }
-
+        
         public async Task CreateAsync(PipelineDto input)
         {
             var pipelineHistoryCreateDto = new PipelineHistoryCreateDto
@@ -25,5 +26,7 @@ namespace Nebula.CI.Services.Proxy
             };
             await _pipelineHistoryAppService.CreateAsync(pipelineHistoryCreateDto);
         }
+        
     }
+    */
 }

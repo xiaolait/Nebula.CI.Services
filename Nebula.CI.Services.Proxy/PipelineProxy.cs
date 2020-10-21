@@ -7,6 +7,7 @@ using Nebula.CI.Services.PipelineHistory;
 
 namespace Nebula.CI.Services.Proxy
 {
+    /*
     public class PipelineProxy : IPipelineProxy
     {
         private readonly IPipelineAppService _pipelineAppService;
@@ -33,4 +34,5 @@ namespace Nebula.CI.Services.Proxy
             await _pipelineAppService.UpdateStatusAsync(updatePipelineStatusDto);
         }
     }
+    */
 }

@@ -41,9 +41,8 @@
     <ProjectReference Include="..\Nebula.CI.Services.Plugins\Nebula.CI.Services.Plugin.Application\Nebula.CI.Services.Plugin.Application.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="..\Nebula.CI.Services.Pipeline\Nebula.CI.Services.Pipeline.Background\Nebula.CI.Services.Pipeline.Background.csproj">
+    <ProjectReference Include="..\Nebula.Abp.EventBus.InMemDistributed\Nebula.Abp.EventBus.InMemDistributed.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-      <ReferenceSourceTarget></ReferenceSourceTarget>
     </ProjectReference>
   </ItemGroup>
 </Project>

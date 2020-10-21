@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.Plugin.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.CI.Services.Plugin.Application.Contracts", "Nebula.CI.Services.Plugins\Nebula.CI.Services.Plugin.Application.Contracts\Nebula.CI.Services.Plugin.Application.Contracts.csproj", "{B9C47BC5-E7E6-45CC-BDB1-DFE252E0C76C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nebula.Abp.EventBus.InMemDistributed", "Nebula.Abp.EventBus.InMemDistributed\Nebula.Abp.EventBus.InMemDistributed.csproj", "{752D7D72-B2C0-44E2-B2D4-457F9514A4F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -121,6 +123,10 @@ Global
 		{B9C47BC5-E7E6-45CC-BDB1-DFE252E0C76C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9C47BC5-E7E6-45CC-BDB1-DFE252E0C76C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9C47BC5-E7E6-45CC-BDB1-DFE252E0C76C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{752D7D72-B2C0-44E2-B2D4-457F9514A4F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{752D7D72-B2C0-44E2-B2D4-457F9514A4F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{752D7D72-B2C0-44E2-B2D4-457F9514A4F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{752D7D72-B2C0-44E2-B2D4-457F9514A4F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9E24B2B9-D36C-40C1-B672-D0B6A8D6875F} = {C501F53C-E86C-4B1C-BFCB-BF266C4DAC34}
