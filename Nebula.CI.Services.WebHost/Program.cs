@@ -8,9 +8,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Nebula.CI.Services.Pipeline;
-using Nebula.CI.Services.PipelineHistory;
-using Nebula.CI.Services.Proxy;
 
 namespace Nebula.CI.Services.WebHost
 {

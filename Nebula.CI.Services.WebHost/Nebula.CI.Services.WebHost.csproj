@@ -35,9 +35,6 @@
     <ProjectReference Include="..\Nebula.CI.Services.PipelineHistory\Nebula.CI.Services.PipelineHistory.Background\Nebula.CI.Services.PipelineHistory.Background.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="..\Nebula.CI.Services.Proxy\Nebula.CI.Services.Proxy.csproj">
-      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-    </ProjectReference>
     <ProjectReference Include="..\Nebula.CI.Services.Plugins\Nebula.CI.Services.Plugin.Application\Nebula.CI.Services.Plugin.Application.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>

@@ -1,8 +1,9 @@
 #! /bin/bash
 
 rm -r ./wwwroot/*
+rm -r ./bin
 
-cd ./ClientApp && \
+cd ./ClientApp && npm install && \
   cp ./static/antd.css ./node_modules/ant-design-vue/dist && \
   cp ./static/codemirror.css ./node_modules/codemirror/lib && \
   npm run build && cp -r ./dist/* ../wwwroot/ && cd ..

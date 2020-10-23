@@ -8,7 +8,6 @@ using Nebula.Abp.EventBus.InMemDistributed;
 using Nebula.CI.Services.Pipeline;
 using Nebula.CI.Services.PipelineHistory;
 using Nebula.CI.Services.Plugin;
-using Nebula.CI.Services.Proxy;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Autofac;
@@ -30,8 +29,6 @@ namespace Nebula.CI.Services.WebHost
     [DependsOn(typeof(PipelineHistoryBackgroundModule))]
 
     [DependsOn(typeof(PluginApplicationModule))]
-
-    [DependsOn(typeof(ServicesProxyModule))]
     [DependsOn(typeof(InMemDistributedEventBusModule))]
     public class WebHostModule : AbpModule
     {
