@@ -1,8 +1,16 @@
 ﻿using System;
+using Volo.Abp;
+using Volo.Abp.BackgroundWorkers;
+using Volo.Abp.Modularity;
 
 namespace Nebula.CI.Services.License
 {
-    public class Class1
+    [DependsOn(typeof(AbpBackgroundWorkersModule))]
+    public class LicenseModule : AbpModule
     {
+        public override void OnApplicationInitialization(ApplicationInitializationContext context)
+        {
+            context.AddBackgroundWorker<LicenseHandokWorker>();
+        }
     }
 }

@@ -41,5 +41,8 @@
     <ProjectReference Include="..\Nebula.Abp.EventBus.InMemDistributed\Nebula.Abp.EventBus.InMemDistributed.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\Nebula.CI.Services.License\Nebula.CI.Services.License.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>

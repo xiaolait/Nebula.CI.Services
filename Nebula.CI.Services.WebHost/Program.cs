@@ -13,9 +13,9 @@ namespace Nebula.CI.Services.WebHost
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            await CreateHostBuilder(args).Build().RunWithTokenAsync();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -25,13 +25,5 @@ namespace Nebula.CI.Services.WebHost
                     webBuilder.UseStartup<Startup>()
                         .UseUrls("http://+:5000");
                 }).UseAutofac();
-                /*.ConfigureServices(services => {
-                    var containerBuilder = services.GetContainerBuilder();
-                    containerBuilder.RegisterType<PipelineProxy>().As<IPipelineProxy>()
-                        .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies);
-
-                    containerBuilder.RegisterType<PipelineHistoryProxy>().As<IPipelineHistoryProxy>()
-                        .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies);
-                });*/
     }
 }

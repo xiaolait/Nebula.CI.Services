@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Nebula.Abp.EventBus.InMemDistributed;
+using Nebula.CI.Services.License;
 using Nebula.CI.Services.Pipeline;
 using Nebula.CI.Services.PipelineHistory;
 using Nebula.CI.Services.Plugin;
@@ -30,6 +31,7 @@ namespace Nebula.CI.Services.WebHost
 
     [DependsOn(typeof(PluginApplicationModule))]
     [DependsOn(typeof(InMemDistributedEventBusModule))]
+    [DependsOn(typeof(LicenseModule))]
     public class WebHostModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
@@ -57,18 +59,6 @@ namespace Nebula.CI.Services.WebHost
             configureSwaggerService(context);
         }
 
-        public override void PostConfigureServices(ServiceConfigurationContext context)
-        {
-            /*
-            var containerBuilder = context.Services.GetContainerBuilder();
-            containerBuilder.RegisterType<PipelineProxy>()
-                .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies);
-
-            containerBuilder.RegisterType<PipelineHistoryProxy>()
-                .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies);
-            */
-        }
-
         public override void OnPreApplicationInitialization(ApplicationInitializationContext context)
         {
             var app = context.GetApplicationBuilder();
@@ -77,6 +67,11 @@ namespace Nebula.CI.Services.WebHost
 
             var pipelineHistoryMigrator = app.ApplicationServices.GetRequiredService<EFCorePipelineHistoryDbSchemaMigrator>();
             pipelineHistoryMigrator.MigrateAsync().Wait();
+
+            var hostRunningToken = app.ApplicationServices.GetRequiredService<HostRunningToken>();
+            var licenseClient = app.ApplicationServices.GetRequiredService<LicenseClient>();
+            var isValid = licenseClient.IsValid().GetAwaiter().GetResult();
+            if (!isValid) hostRunningToken.Cancel();
         }
 
         public override void OnApplicationInitialization(ApplicationInitializationContext context)
