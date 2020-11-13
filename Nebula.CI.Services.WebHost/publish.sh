@@ -13,3 +13,5 @@ cd ./ClientApp && npm install && \
 
 dotnet publish -o ./bin/Release
 docker build -t nebula/ci/services .
+rm /Users/xiaolait/Projects/docker/tmp/nebula.ci.services.tar
+docker save nebula/ci/services > /Users/xiaolait/Projects/docker/tmp/nebula.ci.services.tar
