@@ -15,7 +15,7 @@ namespace Nebula.CI.Services.License
             var isUseLicenseConf = configuration["IsUseLicense"];
             var isUseLicense = true;
             if(!string.IsNullOrEmpty(isUseLicenseConf) && isUseLicenseConf == "false") isUseLicense = false;
-            PreConfigure<LicenseOptions>(options =>
+            Configure<LicenseOptions>(options =>
             {
                 options.IsUseLicense = isUseLicense;
             });
